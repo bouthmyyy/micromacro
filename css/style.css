@@ -22,6 +22,34 @@ body {
   margin: auto;
 }
 
+/* Warning */
+
+.warning {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5vw;
+  background: #fafafa;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  z-index: 10;
+  visibility: hidden;
+}
+
+.warning h1 {
+  font-size: large;
+  padding-bottom: 2vh;
+}
+
+.warning p {
+  font-size: small;
+}
+
 /* Nav */
 
 nav {
@@ -36,7 +64,7 @@ nav {
   width: 10%;
   min-width: 100px;
   box-shadow: 1px 0px 5px;
-  z-index: 10;
+  z-index: 5;
 }
 
 nav ul {
@@ -113,4 +141,10 @@ img.flat-3 {
 }
 .parallax-3 {
   background: url("../img/bg3.jpg") no-repeat center center/cover fixed;
+}
+
+@media (max-width: 1000px) and (max-height: 370px) {
+  .warning {
+    visibility: visible;
+  }
 }
